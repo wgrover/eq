@@ -5,6 +5,9 @@ import urllib.request
 import time
 import curses
 
+import ssl
+ssl._create_default_https_context = ssl._create_unverified_context
+
 def main(stdscr):
     curses.curs_set(False)
     curses.halfdelay(50)  # units are tenths of a second, so 50 = 5 seconds
